@@ -80,7 +80,7 @@ export default async function Home() {
               <form action="/auth/logout" method="post">
                 <button
                   type="submit"
-                  className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                  className="px-4 py-2 text-sm bg-emerald-600 text-white rounded hover:bg-emerald-700"
                 >
                   Sign Out ({session.user.email})
                 </button>
@@ -88,7 +88,7 @@ export default async function Home() {
             ) : (
               <a
                 href="/auth/login"
-                className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                className="px-4 py-2 text-sm bg-emerald-600 text-white rounded hover:bg-emerald-700"
               >
                 Sign In
               </a>
@@ -156,7 +156,7 @@ export default async function Home() {
           <p className="mt-2">
             <a
               href="https://github.com/dkumar2-maker/test-this-ai-stack"
-              className="text-blue-600 hover:underline"
+              className="text-emerald-600 hover:underline"
             >
               View on GitHub
             </a>

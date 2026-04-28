@@ -59,7 +59,7 @@ export default async function DashboardPage() {
           <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-lg flex items-center justify-center">
                   <span className="text-2xl">👤</span>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default async function DashboardPage() {
             <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
               <h3 className="text-lg font-semibold mb-4">Quick Actions</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <button className="p-4 border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-500 transition-colors text-left">
+                <button className="p-4 border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors text-left">
                   <div className="text-2xl mb-2">💬</div>
                   <h4 className="font-semibold text-zinc-900 dark:text-white">AI Chat</h4>
                   <p className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -177,7 +177,7 @@ export default async function DashboardPage() {
                   </p>
                 </button>
 
-                <button className="p-4 border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-500 transition-colors text-left">
+                <button className="p-4 border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors text-left">
                   <div className="text-2xl mb-2">💳</div>
                   <h4 className="font-semibold text-zinc-900 dark:text-white">Upgrade Plan</h4>
                   <p className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -185,7 +185,7 @@ export default async function DashboardPage() {
                   </p>
                 </button>
 
-                <button className="p-4 border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-500 transition-colors text-left">
+                <button className="p-4 border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors text-left">
                   <div className="text-2xl mb-2">⚙️</div>
                   <h4 className="font-semibold text-zinc-900 dark:text-white">Settings</h4>
                   <p className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -195,7 +195,7 @@ export default async function DashboardPage() {
 
                 <a
                   href="/"
-                  className="p-4 border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-500 transition-colors text-left"
+                  className="p-4 border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors text-left"
                 >
                   <div className="text-2xl mb-2">🏠</div>
                   <h4 className="font-semibold text-zinc-900 dark:text-white">Status Page</h4>
