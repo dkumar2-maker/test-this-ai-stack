@@ -67,23 +67,33 @@ export default async function Home() {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold">AI SaaS Stack Status</h1>
-          {session ? (
-            <form action="/auth/logout" method="post">
-              <button
-                type="submit"
+          <div className="flex items-center gap-3">
+            {session && (
+              <a
+                href="/dashboard"
+                className="px-4 py-2 text-sm bg-green-600 text-white rounded hover:bg-green-700"
+              >
+                Dashboard
+              </a>
+            )}
+            {session ? (
+              <form action="/auth/logout" method="post">
+                <button
+                  type="submit"
+                  className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
+                  Sign Out ({session.user.email})
+                </button>
+              </form>
+            ) : (
+              <a
+                href="/auth/login"
                 className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
               >
-                Sign Out ({session.user.email})
-              </button>
-            </form>
-          ) : (
-            <a
-              href="/auth/login"
-              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Sign In
-            </a>
-          )}
+                Sign In
+              </a>
+            )}
+          </div>
         </div>
 
         <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-lg p-6">
