@@ -2,6 +2,12 @@ export const dynamic = 'force-dynamic'
 
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
+import { LiveClock } from "@/app/components/widgets/LiveClock";
+import { PomodoroTimer } from "@/app/components/widgets/PomodoroTimer";
+import { QuoteOfTheDay } from "@/app/components/widgets/QuoteOfTheDay";
+import { StreakCounter } from "@/app/components/widgets/StreakCounter";
+import { ProgressTracker } from "@/app/components/widgets/ProgressTracker";
+import { CountdownWidget } from "@/app/components/widgets/CountdownWidget";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -108,6 +114,19 @@ export default async function DashboardPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Widgets Section */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">🎮 Widgets</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <LiveClock />
+            <StreakCounter />
+            <CountdownWidget />
+            <PomodoroTimer />
+            <ProgressTracker />
+            <QuoteOfTheDay />
           </div>
         </div>
 
