@@ -92,14 +92,14 @@ export function WeatherWidget() {
       <div className="space-y-3">
         {weather.map((w) => (
           <div key={w.location} className="flex items-center justify-between border-t border-white/20 pt-3 first:border-0 first:pt-0">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">{w.emoji}</span>
-              <div>
-                <div className="text-sm font-medium">{w.flag} {w.location}</div>
-                <div className="text-xs opacity-80">{w.condition}</div>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl w-8 text-center">{w.emoji}</span>
+              <div className="flex flex-col">
+                <div className="text-sm font-medium leading-tight">{w.flag} {w.location}</div>
+                <div className="text-xs opacity-80 leading-tight mt-0.5">{w.condition}</div>
               </div>
             </div>
-            <div className="text-2xl font-bold">{w.temp}°F</div>
+            <div className="text-2xl font-bold tabular-nums">{w.temp}°F</div>
           </div>
         ))}
       </div>
