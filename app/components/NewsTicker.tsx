@@ -22,19 +22,19 @@ export function NewsTicker() {
   ])
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-red-600 via-red-700 to-red-600 text-white py-2 z-50 overflow-hidden">
+    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 text-white py-2 z-50 overflow-hidden border-t border-emerald-500/30">
       <div className="flex items-center">
-        <div className="bg-white text-red-700 px-4 py-1 font-bold text-sm uppercase flex-shrink-0 mr-4">
-          Breaking News
+        <div className="bg-emerald-600 text-white px-4 py-1 font-bold text-sm uppercase flex-shrink-0 mr-4">
+          Live News
         </div>
         <div className="ticker-wrap flex-1 overflow-hidden">
           <div className="ticker-move flex gap-8 animate-scroll">
             {/* Duplicate the news items to create seamless loop */}
             {[...news, ...news, ...news].map((item, index) => (
               <div key={index} className="flex items-center gap-2 whitespace-nowrap">
-                <span className="text-yellow-300">●</span>
+                <span className="text-emerald-400">●</span>
                 <span className="font-medium">{item.title}</span>
-                <span className="text-red-200 text-sm">({item.source})</span>
+                <span className="text-zinc-400 text-sm">({item.source})</span>
               </div>
             ))}
           </div>
