@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { LiveClock } from "@/app/components/widgets/LiveClock";
 import { PomodoroTimer } from "@/app/components/widgets/PomodoroTimer";
 import { QuoteOfTheDay } from "@/app/components/widgets/QuoteOfTheDay";
-import { StreakCounter } from "@/app/components/widgets/StreakCounter";
+import { WeatherWidget } from "@/app/components/widgets/WeatherWidget";
 import { ProgressTracker } from "@/app/components/widgets/ProgressTracker";
 import { CountdownWidget } from "@/app/components/widgets/CountdownWidget";
 
@@ -122,7 +122,7 @@ export default async function DashboardPage() {
           <h2 className="text-2xl font-semibold mb-4">🎮 Widgets</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <LiveClock />
-            <StreakCounter />
+            <WeatherWidget />
             <CountdownWidget />
             <PomodoroTimer />
             <ProgressTracker />
