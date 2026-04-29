@@ -60,63 +60,6 @@ export default async function DashboardPage() {
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">👤</span>
-                </div>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                  Account Status
-                </p>
-                <p className="text-2xl font-semibold text-zinc-900 dark:text-white">
-                  Active
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">📊</span>
-                </div>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                  Projects
-                </p>
-                <p className="text-2xl font-semibold text-zinc-900 dark:text-white">
-                  0
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">⚡</span>
-                </div>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                  API Calls
-                </p>
-                <p className="text-2xl font-semibold text-zinc-900 dark:text-white">
-                  0
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Widgets Section */}
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">👀 At a Glance</h2>
