@@ -27,7 +27,7 @@ export function QuoteOfTheDay() {
 
   return (
     <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
-      <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4">😂 Funny Quote of the Day</h3>
+      <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4">Quote of the Day</h3>
       <blockquote className="text-lg italic text-zinc-900 dark:text-white mb-3">
         "{quote.text}"
       </blockquote>
