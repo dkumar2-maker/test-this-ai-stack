@@ -1,4 +1,6 @@
 export const dynamic = 'force-dynamic'
+
+import { NewsTicker } from "@/app/components/NewsTicker";
 import { LiveClock } from "@/app/components/widgets/LiveClock";
 import { MarketIndexes } from "@/app/components/widgets/MarketIndexes";
 import { ThisDayInHistory } from "@/app/components/widgets/ThisDayInHistory";
@@ -53,6 +55,9 @@ export default async function DashboardPage() {
         </div>
 
       </main>
+
+      {/* News Ticker */}
+      <NewsTicker />
     </div>
   );
 }
