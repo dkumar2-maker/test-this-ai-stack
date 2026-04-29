@@ -10,14 +10,29 @@ export function LiveClock() {
     return () => clearInterval(timer)
   }, [])
 
+  const timezones = [
+    { name: '🇺🇸 New York', zone: 'America/New_York' },
+    { name: '🇮🇳 India', zone: 'Asia/Kolkata' },
+    { name: '🇬🇧 London', zone: 'Europe/London' },
+  ]
+
   return (
     <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg shadow p-6 text-white">
-      <h3 className="text-sm font-medium opacity-90 mb-2">Current Time</h3>
-      <div className="text-4xl font-bold tabular-nums">
-        {time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
-      </div>
-      <div className="text-sm opacity-90 mt-2">
-        {time.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
+      <h3 className="text-sm font-medium opacity-90 mb-4">🌍 World Clock</h3>
+      <div className="space-y-3">
+        {timezones.map((tz) => (
+          <div key={tz.zone} className="border-t border-white/20 pt-3 first:border-0 first:pt-0">
+            <div className="text-xs opacity-80 mb-1">{tz.name}</div>
+            <div className="text-2xl font-bold tabular-nums">
+              {time.toLocaleTimeString('en-US', {
+                timeZone: tz.zone,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+              })}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
