@@ -15,7 +15,8 @@ export function WeatherWidget() {
   const [loading, setLoading] = useState(true)
 
   const locations = [
-    { name: 'New York', flag: '🇺🇸', lat: 40.7128, lon: -74.0060 },
+    { name: 'Chicago', flag: '🇺🇸', lat: 41.8781, lon: -87.6298 },
+    { name: 'Dallas', flag: '🇺🇸', lat: 32.7767, lon: -96.7970 },
     { name: 'Mumbai', flag: '🇮🇳', lat: 19.0760, lon: 72.8777 },
     { name: 'London', flag: '🇬🇧', lat: 51.5074, lon: -0.1278 },
   ]

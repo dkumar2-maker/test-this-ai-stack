@@ -11,7 +11,8 @@ export function LiveClock() {
   }, [])
 
   const timezones = [
-    { name: '🇺🇸 New York', zone: 'America/New_York' },
+    { name: '🇺🇸 Chicago', zone: 'America/Chicago' },
+    { name: '🇺🇸 Dallas', zone: 'America/Chicago' },
     { name: '🇮🇳 India', zone: 'Asia/Kolkata' },
     { name: '🇬🇧 London', zone: 'Europe/London' },
   ]
