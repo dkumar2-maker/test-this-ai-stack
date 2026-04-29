@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 
 export function CountdownWidget() {
-  const [targetDate] = useState(new Date('2026-12-31T23:59:59'))
+  const [targetDate] = useState(new Date('2026-05-18T00:00:00'))
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
@@ -26,7 +26,8 @@ export function CountdownWidget() {
 
   return (
     <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg shadow p-6 text-white">
-      <h3 className="text-sm font-medium opacity-90 mb-4">🎯 Days Until 2027</h3>
+      <h3 className="text-sm font-medium opacity-90 mb-2">🎯 Days Until Hackathon</h3>
+      <div className="text-xs opacity-80 mb-4">May 18, 2026</div>
       <div className="grid grid-cols-4 gap-2">
         <div className="text-center">
           <div className="text-2xl font-bold">{timeLeft.days}</div>
