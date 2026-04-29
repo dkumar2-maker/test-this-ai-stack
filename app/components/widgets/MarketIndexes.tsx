@@ -66,7 +66,6 @@ export function MarketIndexes() {
           </div>
         ))}
       </div>
-      <div className="text-xs text-zinc-500 dark:text-zinc-500 mt-4 text-center">Demo data • Updates on refresh</div>
     </div>
   )
 }
