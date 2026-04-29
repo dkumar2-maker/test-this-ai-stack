@@ -45,8 +45,6 @@ function checkPostHog() {
 }
 
 export default async function Home() {
-  const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
 
   const [supabaseStatus, openaiStatus, stripeStatus, posthogStatus] = await Promise.all([
     checkSupabase(),
@@ -67,33 +65,12 @@ export default async function Home() {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold text-white">AI SaaS Stack Status</h1>
-          <div className="flex items-center gap-3">
-            {session && (
-              <a
-                href="/dashboard"
-                className="px-4 py-2 text-sm bg-green-600 text-white rounded hover:bg-green-700"
-              >
-                Dashboard
-              </a>
-            )}
-            {session ? (
-              <form action="/auth/logout" method="post">
-                <button
-                  type="submit"
-                  className="px-4 py-2 text-sm bg-emerald-600 text-white rounded hover:bg-emerald-700"
-                >
-                  Sign Out ({session.user.email})
-                </button>
-              </form>
-            ) : (
-              <a
-                href="/auth/login"
-                className="px-4 py-2 text-sm bg-emerald-600 text-white rounded hover:bg-emerald-700"
-              >
-                Sign In
-              </a>
-            )}
-          </div>
+          <a
+            href="/dashboard"
+            className="px-4 py-2 text-sm bg-emerald-600 text-white rounded hover:bg-emerald-700"
+          >
+            Dashboard
+          </a>
         </div>
 
         <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-lg p-6">

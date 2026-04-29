@@ -1,7 +1,4 @@
 export const dynamic = 'force-dynamic'
-
-import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
 import { LiveClock } from "@/app/components/widgets/LiveClock";
 import { MarketIndexes } from "@/app/components/widgets/MarketIndexes";
 import { ThisDayInHistory } from "@/app/components/widgets/ThisDayInHistory";
@@ -10,14 +7,6 @@ import { GlobalIndexes } from "@/app/components/widgets/GlobalIndexes";
 import { CountdownWidget } from "@/app/components/widgets/CountdownWidget";
 
 export default async function DashboardPage() {
-  const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
-
-  if (!session) {
-    redirect('/auth/login');
-  }
-
-  const user = session.user;
 
   return (
     <div className="min-h-screen bg-zinc-800 dark:bg-black">
@@ -28,22 +17,12 @@ export default async function DashboardPage() {
             <div className="flex items-center">
               <h1 className="text-2xl font-bold">Dashboard</h1>
             </div>
-            <div className="flex items-center gap-4">
-              <a
-                href="/"
-                className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
-              >
-                Home
-              </a>
-              <form action="/auth/logout" method="post">
-                <button
-                  type="submit"
-                  className="px-4 py-2 text-sm bg-red-600 text-white rounded hover:bg-red-700"
-                >
-                  Sign Out
-                </button>
-              </form>
-            </div>
+            <a
+              href="/"
+              className="text-sm text-zinc-300 hover:text-white"
+            >
+              Home
+            </a>
           </div>
         </div>
       </header>
