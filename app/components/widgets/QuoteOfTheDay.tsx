@@ -3,16 +3,18 @@
 import { useState, useEffect } from 'react'
 
 const quotes = [
-  { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
-  { text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
-  { text: "Stay hungry, stay foolish.", author: "Steve Jobs" },
-  { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
-  { text: "Your time is limited, don't waste it living someone else's life.", author: "Steve Jobs" },
-  { text: "Build something people want.", author: "Paul Graham" },
-  { text: "Make something people want includes making a company that people want to work for.", author: "Sahil Lavingia" },
-  { text: "The biggest risk is not taking any risk.", author: "Mark Zuckerberg" },
-  { text: "Done is better than perfect.", author: "Sheryl Sandberg" },
-  { text: "Move fast and break things.", author: "Mark Zuckerberg" },
+  { text: "I'm not lazy, I'm just on energy-saving mode.", author: "Anonymous Developer" },
+  { text: "There are only two hard things in Computer Science: cache invalidation and naming things.", author: "Phil Karlton" },
+  { text: "It works on my machine.", author: "Every Developer Ever" },
+  { text: "I don't always test my code, but when I do, I do it in production.", author: "Anonymous" },
+  { text: "Programming is 10% writing code and 90% understanding why it's not working.", author: "Anonymous" },
+  { text: "I would tell you a UDP joke, but you might not get it.", author: "Network Humor" },
+  { text: "Why do programmers prefer dark mode? Because light attracts bugs.", author: "Dev Wisdom" },
+  { text: "In theory, there's no difference between theory and practice. In practice, there is.", author: "Yogi Berra" },
+  { text: "I'm not procrastinating, I'm doing side quests.", author: "Gamer Logic" },
+  { text: "Coffee: because debugging before caffeine is like trying to read binary without a computer.", author: "Caffeine Enthusiast" },
+  { text: "I speak fluent sarcasm and broken code.", author: "Modern Developer" },
+  { text: "My code doesn't have bugs, it just develops random features.", author: "Optimistic Programmer" },
 ]
 
 export function QuoteOfTheDay() {
@@ -25,7 +27,7 @@ export function QuoteOfTheDay() {
 
   return (
     <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
-      <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4">💡 Quote of the Day</h3>
+      <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4">😂 Funny Quote of the Day</h3>
       <blockquote className="text-lg italic text-zinc-900 dark:text-white mb-3">
         "{quote.text}"
       </blockquote>
