@@ -3,10 +3,10 @@ export const dynamic = 'force-dynamic'
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { LiveClock } from "@/app/components/widgets/LiveClock";
-import { PomodoroTimer } from "@/app/components/widgets/PomodoroTimer";
+import { MarketIndexes } from "@/app/components/widgets/MarketIndexes";
 import { QuoteOfTheDay } from "@/app/components/widgets/QuoteOfTheDay";
 import { WeatherWidget } from "@/app/components/widgets/WeatherWidget";
-import { ProgressTracker } from "@/app/components/widgets/ProgressTracker";
+import { GlobalIndexes } from "@/app/components/widgets/GlobalIndexes";
 import { CountdownWidget } from "@/app/components/widgets/CountdownWidget";
 
 export default async function DashboardPage() {
@@ -124,8 +124,8 @@ export default async function DashboardPage() {
             <LiveClock />
             <WeatherWidget />
             <CountdownWidget />
-            <PomodoroTimer />
-            <ProgressTracker />
+            <MarketIndexes />
+            <GlobalIndexes />
             <QuoteOfTheDay />
           </div>
         </div>
