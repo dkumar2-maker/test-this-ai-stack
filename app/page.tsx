@@ -63,10 +63,10 @@ export default async function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-black p-8">
+    <div className="min-h-screen bg-zinc-800 dark:bg-black p-8">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">AI SaaS Stack Status</h1>
+          <h1 className="text-4xl font-bold text-white">AI SaaS Stack Status</h1>
           <div className="flex items-center gap-3">
             {session && (
               <a
