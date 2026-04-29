@@ -12,34 +12,34 @@ export function ThisDayInHistory() {
   const [event, setEvent] = useState<HistoricalEvent | null>(null)
   const [todayDate, setTodayDate] = useState('')
 
-  // Historical events database (organized by month-day)
+  // Sports historical events database (organized by month-day)
   const historicalEvents: { [key: string]: HistoricalEvent[] } = {
     '04-29': [
-      { year: 1945, event: 'Adolf Hitler marries Eva Braun in his Berlin bunker, one day before their suicide', category: 'War' },
-      { year: 1992, event: 'Los Angeles riots begin following the Rodney King verdict', category: 'Social' },
-      { year: 2011, event: 'Prince William marries Catherine Middleton at Westminster Abbey', category: 'Royal' },
-      { year: 1997, event: 'The Chemical Weapons Convention enters into force', category: 'Peace' },
+      { year: 1986, event: 'Michael Jordan scores 63 points in a playoff game against the Celtics, an NBA playoff record', category: 'Basketball' },
+      { year: 2017, event: 'Anthony Joshua defeats Wladimir Klitschko in an epic heavyweight championship bout', category: 'Boxing' },
+      { year: 1961, event: 'The Boston Celtics win their third consecutive NBA championship', category: 'Basketball' },
+      { year: 2007, event: 'Tom Brady signs record-breaking contract extension with the Patriots', category: 'NFL' },
     ],
     '05-18': [
-      { year: 1980, event: 'Mount St. Helens erupts in Washington state, killing 57 people', category: 'Natural' },
-      { year: 1896, event: 'The U.S. Supreme Court rules in Plessy v. Ferguson, establishing "separate but equal"', category: 'Legal' },
-      { year: 1969, event: 'Apollo 10 launches, the dress rehearsal for the first Moon landing', category: 'Space' },
-      { year: 1953, event: 'The first woman to fly faster than sound, Jacqueline Cochran, breaks the sound barrier', category: 'Aviation' },
+      { year: 1980, event: 'Magic Johnson scores 42 points as a rookie to lead Lakers to NBA Finals victory', category: 'Basketball' },
+      { year: 1946, event: 'Jackie Robinson makes his minor league debut, breaking baseball\'s color barrier', category: 'Baseball' },
+      { year: 1997, event: 'Michael Jordan\'s "Flu Game" - scores 38 points despite being ill in NBA Finals', category: 'Basketball' },
+      { year: 2013, event: 'Sergio Garcia wins his first major championship at The Masters', category: 'Golf' },
     ],
     '01-01': [
-      { year: 1863, event: 'Abraham Lincoln issues the Emancipation Proclamation', category: 'Freedom' },
-      { year: 1994, event: 'NAFTA (North American Free Trade Agreement) goes into effect', category: 'Economics' },
-      { year: 2002, event: 'Euro notes and coins enter circulation in 12 European countries', category: 'Currency' },
+      { year: 2018, event: 'Alabama defeats Georgia in overtime to win the College Football National Championship', category: 'Football' },
+      { year: 2006, event: 'Texas defeats USC in the Rose Bowl, one of the greatest college football games ever', category: 'Football' },
+      { year: 1974, event: 'Miami Dolphins complete the only perfect season in NFL history', category: 'NFL' },
     ],
     '07-04': [
-      { year: 1776, event: 'The United States Declaration of Independence is adopted', category: 'Independence' },
-      { year: 2012, event: 'CERN announces discovery of the Higgs boson particle', category: 'Science' },
-      { year: 1997, event: "NASA's Pathfinder space probe lands on Mars", category: 'Space' },
+      { year: 1939, event: 'Lou Gehrig delivers his famous "Luckiest Man" speech at Yankee Stadium', category: 'Baseball' },
+      { year: 2012, event: 'Roger Federer wins his record 7th Wimbledon title', category: 'Tennis' },
+      { year: 1976, event: 'Reggie Jackson hits 3 consecutive home runs in the All-Star Game', category: 'Baseball' },
     ],
     '12-25': [
-      { year: 1991, event: 'Mikhail Gorbachev resigns as president of the Soviet Union', category: 'Politics' },
-      { year: 1968, event: 'Apollo 8 astronauts become the first humans to orbit the Moon', category: 'Space' },
-      { year: 800, event: 'Charlemagne is crowned Holy Roman Emperor', category: 'History' },
+      { year: 2008, event: 'Kobe Bryant scores 42 points on Christmas Day against the Celtics', category: 'Basketball' },
+      { year: 2004, event: 'Shaquille O\'Neal returns to LA and faces his former Lakers team', category: 'Basketball' },
+      { year: 2016, event: 'LeBron James leads Cavaliers to Christmas Day victory in NBA showcase', category: 'Basketball' },
     ],
   }
 
@@ -61,7 +61,7 @@ export function ThisDayInHistory() {
   if (!event) {
     return (
       <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
-        <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4">📅 This Day in History</h3>
+        <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4">🏆 This Day in Sports History</h3>
         <div className="text-center py-4 text-zinc-600 dark:text-zinc-400">Loading...</div>
       </div>
     )
@@ -69,7 +69,7 @@ export function ThisDayInHistory() {
 
   return (
     <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 border border-zinc-200 dark:border-zinc-800">
-      <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4">📅 This Day in History</h3>
+      <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4">🏆 This Day in Sports History</h3>
       <div className="mb-3">
         <div className="text-xs text-zinc-500 dark:text-zinc-500 mb-2">{todayDate}</div>
         <div className="inline-block px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium rounded mb-3">
