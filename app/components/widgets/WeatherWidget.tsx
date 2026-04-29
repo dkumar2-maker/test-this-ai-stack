@@ -80,7 +80,7 @@ export function WeatherWidget() {
   if (loading) {
     return (
       <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg shadow p-6 text-white">
-        <h3 className="text-sm font-medium opacity-90 mb-4">🌤️ Weather</h3>
+        <h3 className="text-sm font-medium opacity-90 mb-4">🌤️ World Weather</h3>
         <div className="text-center py-4">Loading...</div>
       </div>
     )
@@ -89,9 +89,9 @@ export function WeatherWidget() {
   return (
     <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg shadow p-6 text-white">
       <h3 className="text-sm font-medium opacity-90 mb-4">🌤️ World Weather</h3>
-      <div className="space-y-3">
+      <div className="space-y-2.5">
         {weather.map((w) => (
-          <div key={w.location} className="flex items-center justify-between border-t border-white/20 pt-3 first:border-0 first:pt-0">
+          <div key={w.location} className="flex items-center justify-between border-t border-white/20 pt-2.5 first:border-0 first:pt-0">
             <div className="flex items-center gap-3">
               <span className="text-2xl w-8 text-center">{w.emoji}</span>
               <div className="flex flex-col">
@@ -103,7 +103,6 @@ export function WeatherWidget() {
           </div>
         ))}
       </div>
-      <div className="text-xs opacity-70 mt-4 text-center">Updates every 5 minutes</div>
     </div>
   )
 }
