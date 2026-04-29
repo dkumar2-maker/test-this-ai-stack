@@ -37,7 +37,7 @@ export default async function DashboardPage() {
             Welcome back!
           </h2>
           <p className="text-zinc-300">
-            Here's your daily dashboard with everything you need
+            Here's your daily dashboard with everything you need.
           </p>
         </div>
 
