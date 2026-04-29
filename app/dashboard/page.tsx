@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { LiveClock } from "@/app/components/widgets/LiveClock";
 import { MarketIndexes } from "@/app/components/widgets/MarketIndexes";
-import { QuoteOfTheDay } from "@/app/components/widgets/QuoteOfTheDay";
+import { ThisDayInHistory } from "@/app/components/widgets/ThisDayInHistory";
 import { WeatherWidget } from "@/app/components/widgets/WeatherWidget";
 import { GlobalIndexes } from "@/app/components/widgets/GlobalIndexes";
 import { CountdownWidget } from "@/app/components/widgets/CountdownWidget";
@@ -126,7 +126,7 @@ export default async function DashboardPage() {
             <CountdownWidget />
             <MarketIndexes />
             <GlobalIndexes />
-            <QuoteOfTheDay />
+            <ThisDayInHistory />
           </div>
         </div>
 
