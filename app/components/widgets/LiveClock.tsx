@@ -19,7 +19,7 @@ export function LiveClock() {
 
   return (
     <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg shadow p-6 text-white">
-      <h3 className="text-sm font-medium opacity-90 mb-4">🌍 World Clock</h3>
+      <h3 className="text-sm font-medium opacity-90 mb-4">G2 World clock</h3>
       <div className="space-y-3">
         {timezones.map((tz) => (
           <div key={tz.zone} className="border-t border-white/20 pt-3 first:border-0 first:pt-0">
