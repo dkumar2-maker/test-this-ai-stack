@@ -25,25 +25,25 @@ export function CountdownWidget() {
   }, [targetDate])
 
   return (
-    <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg shadow p-6 text-white">
-      <h3 className="text-sm font-medium opacity-90 mb-2">🎯 Days Until Hackathon</h3>
-      <div className="text-xs opacity-80 mb-4">May 18, 2026</div>
-      <div className="grid grid-cols-2 gap-4">
+    <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg shadow p-4 text-white">
+      <h3 className="text-sm font-medium opacity-90 mb-1">🎯 Days Until Hackathon</h3>
+      <div className="text-xs opacity-80 mb-3">May 18, 2026</div>
+      <div className="grid grid-cols-4 gap-2">
         <div className="text-center">
-          <div className="text-5xl font-bold tabular-nums">{timeLeft.days}</div>
-          <div className="text-sm opacity-90 mt-1">DAYS</div>
+          <div className="text-2xl font-bold tabular-nums">{timeLeft.days}</div>
+          <div className="text-xs opacity-90 mt-0.5">DAYS</div>
         </div>
         <div className="text-center">
-          <div className="text-5xl font-bold tabular-nums">{timeLeft.hours}</div>
-          <div className="text-sm opacity-90 mt-1">HOURS</div>
+          <div className="text-2xl font-bold tabular-nums">{timeLeft.hours}</div>
+          <div className="text-xs opacity-90 mt-0.5">HRS</div>
         </div>
         <div className="text-center">
-          <div className="text-5xl font-bold tabular-nums">{timeLeft.minutes}</div>
-          <div className="text-sm opacity-90 mt-1">MINUTES</div>
+          <div className="text-2xl font-bold tabular-nums">{timeLeft.minutes}</div>
+          <div className="text-xs opacity-90 mt-0.5">MIN</div>
         </div>
         <div className="text-center">
-          <div className="text-5xl font-bold tabular-nums">{timeLeft.seconds}</div>
-          <div className="text-sm opacity-90 mt-1">SECONDS</div>
+          <div className="text-2xl font-bold tabular-nums">{timeLeft.seconds}</div>
+          <div className="text-xs opacity-90 mt-0.5">SEC</div>
         </div>
       </div>
     </div>

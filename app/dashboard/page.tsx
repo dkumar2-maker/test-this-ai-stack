@@ -7,6 +7,7 @@ import { ThisDayInHistory } from "@/app/components/widgets/ThisDayInHistory";
 import { WeatherWidget } from "@/app/components/widgets/WeatherWidget";
 import { GlobalIndexes } from "@/app/components/widgets/GlobalIndexes";
 import { CountdownWidget } from "@/app/components/widgets/CountdownWidget";
+import { FlightPrices } from "@/app/components/widgets/FlightPrices";
 
 export default async function DashboardPage() {
 
@@ -47,7 +48,10 @@ export default async function DashboardPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <LiveClock />
             <WeatherWidget />
-            <CountdownWidget />
+            <div className="space-y-4">
+              <CountdownWidget />
+              <FlightPrices />
+            </div>
             <MarketIndexes />
             <GlobalIndexes />
             <ThisDayInHistory />
