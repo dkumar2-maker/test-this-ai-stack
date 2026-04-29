@@ -80,7 +80,7 @@ export function WeatherWidget() {
   if (loading) {
     return (
       <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg shadow p-4 text-white">
-        <h3 className="text-sm font-medium opacity-90 mb-4">🌤️ World Weather</h3>
+        <h3 className="text-sm font-medium opacity-90 mb-3">🌤️ World Weather</h3>
         <div className="text-center py-4">Loading...</div>
       </div>
     )
@@ -88,18 +88,18 @@ export function WeatherWidget() {
 
   return (
     <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg shadow p-4 text-white">
-      <h3 className="text-sm font-medium opacity-90 mb-4">🌤️ World Weather</h3>
-      <div className="space-y-3.5">
+      <h3 className="text-sm font-medium opacity-90 mb-3">🌤️ World Weather</h3>
+      <div className="space-y-2">
         {weather.map((w) => (
-          <div key={w.location} className="flex items-center justify-between border-t border-white/20 pt-3.5 first:border-0 first:pt-0">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl w-8 text-center">{w.emoji}</span>
+          <div key={w.location} className="flex items-center justify-between border-t border-white/20 pt-2 first:border-0 first:pt-0">
+            <div className="flex items-center gap-2.5">
+              <span className="text-xl w-7 text-center">{w.emoji}</span>
               <div className="flex flex-col">
-                <div className="text-sm font-medium leading-normal">{w.flag} {w.location}</div>
-                <div className="text-xs opacity-80 leading-normal mt-1">{w.condition}</div>
+                <div className="text-sm font-medium leading-tight">{w.flag} {w.location}</div>
+                <div className="text-xs opacity-80 leading-tight mt-0.5">{w.condition}</div>
               </div>
             </div>
-            <div className="text-2xl font-bold tabular-nums">{w.temp}°F</div>
+            <div className="text-xl font-bold tabular-nums">{w.temp}°F</div>
           </div>
         ))}
       </div>
